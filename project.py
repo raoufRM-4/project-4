@@ -19,6 +19,12 @@ class Employe:
             return
         self.voiture_service=voiture
         voiture.chauffeur=self
+    def retirer(self):
+        if self.voiture_service:
+            print("cet employer a pas de voiture")
+            return
+        self.voiture_service.chauffeur=None
+        self.voiture_service=None
 class Voiture:
     def __init__(self,matricule,annee,marque,km):
         self.matricule=matricule
@@ -32,4 +38,9 @@ class Voiture:
             print(f"le chauffeur est:{self.chauffeur}")
         else:
             print("aucune chauffeur")
-    
+
+
+e1=Employe(3005,"abderaouf","moulla")
+e2=Employe(15699,"MR","X")
+e3=Employe(2004,"adem","M")
+v1=Voiture("")
