@@ -10,4 +10,14 @@ class Employe:
             print("voiture attribuee")
         else:
             print("auucne voiture attribuee")
-        
+    def affectuer(self,voiture):
+class Voiture:
+    def __init__(self,matricule,annee,marque,km,chauffeur):
+        self.matricule=matricule
+        self.annee=annee
+        self.marque=marque
+        self.km=km
+        self.chauffeur=None
+    def afficher(self):
+        print(f"la matricule est{self.matricule},annee est:{self.annee},marque est:{self.marque},le kilometrage est:{self.km}")
+       
