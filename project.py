@@ -11,8 +11,16 @@ class Employe:
         else:
             print("auucne voiture attribuee")
     def affectuer(self,voiture):
+        if self.voiture_service:
+            print("cet employe possede deja une voiture")
+            return
+        if self.voiture.chauffeur is not None:
+            print("cette voiture est deja attribuee")
+            return
+        self.voiture_service=voiture
+        voiture.chauffeur=self
 class Voiture:
-    def __init__(self,matricule,annee,marque,km,chauffeur):
+    def __init__(self,matricule,annee,marque,km):
         self.matricule=matricule
         self.annee=annee
         self.marque=marque
@@ -20,4 +28,8 @@ class Voiture:
         self.chauffeur=None
     def afficher(self):
         print(f"la matricule est{self.matricule},annee est:{self.annee},marque est:{self.marque},le kilometrage est:{self.km}")
-       
+        if self.chauffeur:
+            print(f"le chauffeur est:{self.chauffeur}")
+        else:
+            print("aucune chauffeur")
+    
