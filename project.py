@@ -43,4 +43,5 @@ class Voiture:
 e1=Employe(3005,"abderaouf","moulla")
 e2=Employe(15699,"MR","X")
 e3=Employe(2004,"adem","M")
-v1=Voiture("")
+v1=Voiture("BFD 90M",2010,"KIA",290000)
+v2=Voiture("CVT 654",2014,"toyota",350000)
