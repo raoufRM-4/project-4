@@ -14,13 +14,13 @@ class Employe:
         if self.voiture_service:
             print("cet employe possede deja une voiture")
             return
-        if self.voiture.chauffeur is not None:
+        if voiture.chauffeur is not None:
             print("cette voiture est deja attribuee")
             return
         self.voiture_service=voiture
         voiture.chauffeur=self
     def retirer(self):
-        if self.voiture_service:
+        if self.voiture_service is None:
             print("cet employer a pas de voiture")
             return
         self.voiture_service.chauffeur=None
@@ -48,3 +48,5 @@ v2=Voiture("CVT 654",2014,"toyota",350000)
 e1.afficher()
 e2.afficher()
 e3.afficher()
+e1.affectuer(v1)
+e1.afficher()
